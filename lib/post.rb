@@ -6,8 +6,6 @@ class Post
   end
 
   def author_name
-    self.author.name
-  rescue
-    nil
+    author == nil ? nil : self.author.name
   end
 end
