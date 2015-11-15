@@ -1,7 +1,7 @@
 require_relative 'post'
 
 class Author
-  attr_accessor :name, :author, :posts
+  attr_accessor :name, :posts
 
   @@post_count = 0
 

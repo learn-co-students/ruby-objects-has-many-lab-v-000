@@ -1,7 +1,7 @@
 require_relative 'song'
 
 class Artist 
-  attr_accessor :name, :artist, :songs 
+  attr_accessor :name, :songs 
 
   @@song_count = 0
 
