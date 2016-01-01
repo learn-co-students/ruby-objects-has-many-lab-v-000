@@ -4,7 +4,11 @@ class Song
 		@name = name
 	end
 	def artist_name
-		@artist.name
+		if !@artist.nil?
+			@artist.name
+		else
+			@artist
+		end
 	end
 	
 end
