@@ -30,8 +30,6 @@ describe "Post" do
       expect(post.author_name).to eq("Sophie")
     end 
 
-    it "returns nil if the post does not have an author" do 
-      expect(post.author_name).to eq nil
-    end
+    
   end
 end
