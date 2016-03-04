@@ -1,9 +1,9 @@
 require "spec_helper"
+require "pry"
 
 describe "Artist" do
 
   let!(:adele) { Artist.new("Adele") } 
-
     describe "#new" do 
       it "is initialized with a name" do 
         expect{Artist.new("Beyonce")}.to_not raise_error

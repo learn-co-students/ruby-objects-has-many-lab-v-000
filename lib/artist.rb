@@ -1,4 +1,5 @@
 class Artist
+  @@song_count = 0
 
   attr_accessor :name
 
@@ -10,6 +11,7 @@ class Artist
   def add_song(song)
     @songs << song
     song.artist = self
+    @@song_count += 1
   end
 
   def songs
@@ -20,15 +22,11 @@ class Artist
     song = Song.new(name)
     @songs << song
     song.artist = self
+    @@song_count += 1
   end
 
-#is a class method that returns the 
-#total number of songs associated to all existing artists
-
-#and
-#uses the class variable, @@song_count
-  def song_count
-    @songs.count
+  def self.song_count
+    @@song_count
   end
 
 end
