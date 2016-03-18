@@ -9,7 +9,11 @@ attr_accessor :title, :author, :author_name
     @title
   end
 
-  def author_name
-    @author_name = author.name
-  end
+ def author_name
+    if (self.author.nil?)
+      return nil
+    else
+      self.author_name = self.author.name
+    end
+ end
 end
