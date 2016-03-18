@@ -6,6 +6,10 @@ attr_accessor :name, :artist, :artist_name
   end
 
   def artist_name
-    @artist_name = artist.name
+    if (self.artist.nil?)
+      return nil
+    else
+      self.artist_name = self.artist.name
+    end
   end
 end
