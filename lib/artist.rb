@@ -24,12 +24,4 @@ class Artist
   def self.song_count
     @@song_count
   end
-
-  # def songs
-  #   @songs
-  # end
-
-  # def artist_name
-  #   self.artist.name
-  # end
 end
