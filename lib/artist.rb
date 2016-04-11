@@ -14,7 +14,7 @@ end
 
 def add_song(song)
   @songs << song
-  self
+  song.name = self
 end
 
 
