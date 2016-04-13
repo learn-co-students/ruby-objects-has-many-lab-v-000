@@ -31,7 +31,7 @@ describe "Artist" do
         adele.add_song(hello)
         expect(adele.songs).to include(hello)
         expect(hello.artist).to eq(adele)
-      end
+      end 
     end
 
     describe "#add_song_by_name" do 
