@@ -7,7 +7,8 @@ class Song
     @name = name
   end
 
-  def artist_name
+  def artist_name #its passing. I just feel that every time I revert to an if
+    #statement, I'm doing it the wrong way.
     #binding.
     if self.artist == nil
       return nil
