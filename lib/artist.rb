@@ -9,15 +9,12 @@ class Artist
   def initialize(name)
     @name = name
     @songs =[]
-# binding.pry
   end
 
   def add_song(song)
     @songs << song
     song.artist = self
-    # binding.pry
     @@song_count+=1 #+=1 here and below to account for all songs associated to all the existing artists
-
   end
 
   def add_song_by_name(name)
@@ -25,13 +22,11 @@ class Artist
     @songs << song
     song.artist = self
     @@song_count+=1
-
-    # binding.pry
   end
 
   def self.song_count
     @@song_count
-    # binding.pry
+  #return the song count
   end
 
 end

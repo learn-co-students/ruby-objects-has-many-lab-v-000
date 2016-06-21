@@ -22,12 +22,10 @@ class Author
     @posts << title
     title.author = self
     @@post_count+=1
-    # binding.pry
   end
-  #
+  
   def self.post_count
-    @@post_count
-    # binding.pry
+    @@post_count #return the post count
   end
 
 end
