@@ -1,10 +1,15 @@
+require "pry"
+
 class Author
 
-attr_accessor :name, :posts, 
+attr_accessor :name, :posts
+
+@@authors = []
 
   def initialize name
     @name = name
     @posts = []
+    @@authors << self
   end
 
   def add_post post
@@ -13,14 +18,14 @@ attr_accessor :name, :posts,
   end
 
   def add_post_by_title post_title
-    post = Post.new
+    post = Post.new (post_title)
     post.author = self
-    post.title = post_title
     @posts << post
   end
 
-  def post_count
-    @@post_count = @posts.length
+  def self.post_count
+    @@post_count = 0
+    @@authors.each { |author| @@post_count += author.posts.length}
     @@post_count
   end
 end

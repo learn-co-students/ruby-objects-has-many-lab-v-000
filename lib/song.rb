@@ -1,3 +1,5 @@
+require "pry"
+
 class Song
 
 attr_accessor :name, :artist
@@ -7,6 +9,6 @@ attr_accessor :name, :artist
   end
 
   def artist_name
-    self.artist.name
+    self.artist == nil ? nil : self.artist.name
   end
 end
