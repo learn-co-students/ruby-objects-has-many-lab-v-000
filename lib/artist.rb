@@ -10,14 +10,16 @@ class Artist
   end
 
   def add_song(song)
-    @songs << song
+    self.songs << song
     song.artist = self
+    @@song_count +=1
   end
 
   def add_song_by_name(name)
     song = Song.new(name)
-    @songs << song
+    self.songs << song
     song.artist = self
+    @@song_count +=1
   end
 
   def songs
@@ -25,7 +27,7 @@ class Artist
   end
 
   def self.song_count
-    @@song_count == Song.new.array.inject(0){|sum,x| sum + x }
+    @@song_count
   end
 
   def artist_name
