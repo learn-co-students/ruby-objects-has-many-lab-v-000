@@ -1,5 +1,7 @@
+require 'pry'
 class Artist
   attr_accessor :name
+  attr_reader :songs
 
   @@song_count = 0
 
@@ -9,24 +11,19 @@ class Artist
   end
 
   def add_song(song)
+    song.artist = self
     self.songs << song
     @@song_count += 1
-    song.artist = self
   end
 
   def add_song_by_name(song_name)
-    song = Song.new(song_name)
-    self.songs << song
+    @song = Song.new(song_name)
+    @song.artist = self
+    self.songs << @song
     @@song_count += 1
-    song.artist = self
-  end
-
-  def songs
-    @songs
   end
 
   def self.song_count
     @@song_count
   end
-
 end
