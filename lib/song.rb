@@ -11,4 +11,12 @@ class Song
   def self.total
     @@all
   end
+
+  def has_artist?
+    !!artist
+  end
+
+  def artist_name
+    !!artist ? self.artist.name : nil
+  end
 end
