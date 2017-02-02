@@ -8,10 +8,10 @@ class Song
   end
 
   def artist_name
-    begin
-       self.artist.name
-    rescue StandardError
+    if self.artist
+      self.artist.name
+    else
       nil
-    end  
+    end    
   end
 end

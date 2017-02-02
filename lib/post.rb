@@ -8,10 +8,10 @@ class Post
   end
 
   def author_name
-    begin
-       self.author.name
-    rescue StandardError
+    if self.author
+      self.author.name
+    else
       nil
-    end  
+    end    
   end
 end
