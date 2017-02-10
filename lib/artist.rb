@@ -3,9 +3,13 @@ class Artist
 
   @@song_count = 0
 
-  def intialize(name)
+  def initialize(name)
     @name = name
     @songs = []
+  end
+
+  def songs
+    @songs
   end
 
   def add_song(name)

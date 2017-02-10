@@ -3,9 +3,13 @@ class Author
 
   @@post_count = 0
 
-  def intialize(name)
-    @name=name
-    @posts=[]
+  def initialize(name)
+    @name = name
+    @posts = []
+  end
+
+  def posts
+    @posts
   end
 
   def add_post(name)
@@ -21,7 +25,7 @@ class Author
     @@post_count += 1
   end
 
-  def post_count
+  def self.post_count
     @@post_count
   end
 
