@@ -4,6 +4,7 @@ def initialize (name)
   @name = name
   @songs = []#artist collection of songs
   @@songs = []
+  @artist = artist
 end
 def songs
   @songs = []
@@ -12,7 +13,7 @@ end
 def add_song(song)
   song = Song.new(song)
   @songs << song
-  song.artist = self
+  song.artist= self
   #use the self keyword to refer to the artist on which we are calling this method.
   #We call the #artist= method on the song
   #that is being passed in as an argument and set it equal to self––the artist
