@@ -13,6 +13,7 @@ end
 def add_song(song)
   song = Song.new(song)
   @songs << song
+  name.add_song(song)
   song.artist= self
   #use the self keyword to refer to the artist on which we are calling this method.
   #We call the #artist= method on the song
