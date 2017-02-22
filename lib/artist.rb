@@ -18,7 +18,7 @@ def add_song(song)
   #use the self keyword to refer to the artist on which we are calling this method.
   #We call the #artist= method on the song
   #that is being passed in as an argument and set it equal to self––the artist
-  @@song_count +=1
+  @@song_count +=1 #Update class variable by 1
 end
 def add_song_by_name(name)
   song = Song.new(name)#instantiates object Song to life and assigned to variable song
