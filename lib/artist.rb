@@ -1,11 +1,11 @@
 require 'pry'
 class Artist
   attr_accessor :name, :artist
-  @@song_count = 0
 def initialize (name)
   @name = name
   @songs = []#artist collection of songs
   @artist = artist
+  @@song_count = 0
 end
 def songs
   @songs
@@ -18,7 +18,7 @@ def add_song(song)
   #use the self keyword to refer to the artist on which we are calling this method.
   #We call the #artist= method on the song
   #that is being passed in as an argument and set it equal to self––the artist
-  @@song +=1
+  @@song_count +=1
 end
 def add_song_by_name(name)
   song = Song.new(name)#instantiates object Song to life and assigned to variable song
@@ -28,9 +28,9 @@ def add_song_by_name(name)
   #what does artist method do?
   #calls artist method on song allows
   #song to to be set equal to self
-end
-def self.song_count
+  end
+  def self.song_count
   @@song_count
   end
-end
+
 end
