@@ -9,6 +9,9 @@ class Author
   def posts
     @posts
   end
+  def author=(author)
+    @author = author
+  end
   def add_post(post)
     @posts << post
     post.author= self
