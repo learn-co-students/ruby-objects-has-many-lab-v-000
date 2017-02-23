@@ -3,7 +3,10 @@ class Song
   def initialize(name)
     @name = name
     @songs = []#artist collection of songs
-    @@songs = []
+    #@@songs = []
     @artist = artist
+  end
+  def artist_name
+    artist.name if artist
   end
 end

@@ -3,7 +3,12 @@ class Post
   def initialize(title)
     @title = title
     @posts = []#artist collection of songs
-    @author = author
-    @author_name = author_name
   end
+  def title
+    @title
+  end
+  def author_name
+    author.name if author#if author is truthy!=nil 
+  end
+
 end
