@@ -5,12 +5,19 @@ class Post
     @title = title
   end
 
+  #Refactored #author_name
   def author_name
-    if author != nil
-      self.author.name
-    else
-      nil
-    end
+    self.author ? self.author.name : nil 
   end
+
+  # old code for #author_name
+
+  # def author_name
+  #   if author != nil
+  #     self.author.name
+  #   else
+  #     nil
+  #   end
+  # end
 
 end
