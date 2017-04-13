@@ -4,7 +4,7 @@
 
 1. Build out the has many/belongs to relationship between two classes. 
 2. Build methods that use the has many/belongs to relationship between two classes. 
-3. Use a class variable to keep track data about a class. 
+3. Use a class variable to track data about a class. 
 4. Build a class method to expose data stored in a class variable. 
 
 ## Instructions
@@ -27,11 +27,13 @@ How can an author have many posts and a post belong to an author? An individual 
 
 To get the tests on these methods passing, you'll need to define methods that take in an argument of a name (or title), use that argument to create a new song (or post) and *then* associate the objects. 
 
+For `add_post_by_title`, you'll want to make sure the body of the method associates the newly created post with an author and adds the post to the author's collection.
+
 #### The `#artist_name` and `#author_name` Methods
 
 Build the methods `some_song.artist_name` and `some_post.author_name` that return the names of the artist and author of the given song and post respectively.
 
-These methods should use, or extend, the has many/belongs to relationship you're building out. If a song has an artist, you can call: `some_song.artist` and return an actual instance of the `Artist` class. Since every artist has a name, `some_song.artist.name` should return the name of a the `Artist` instance associated with the given song. You're `#artist_name` method should utilize this relationship. 
+These methods should use, or extend, the has many/belongs to relationship you're building out. If a song has an artist, you can call: `some_song.artist` and return an actual instance of the `Artist` class. Since every artist has a name, `some_song.artist.name` should return the name of the `Artist` instance associated with the given song. Your `#artist_name` method should utilize this relationship. 
 
 **Note:** We like our code to be robust, i.e. not easily breakable. Make sure your `#artist_name` and `#author_name` methods will not break if the given song or post does not have an artist or author. In this case, your methods should return `nil`.  
 
@@ -40,3 +42,5 @@ These methods should use, or extend, the has many/belongs to relationship you're
 You'll be required to write a class method that tracks the total number of songs, tallied up from all of the existing artists. You'll be required to write a similar method for the `Author` class. 
 
 How do we keep track of data regarding an entire class? With class variables! The `Artist` class should have a class variable, `@@song_count`. This variable should start out set equal to `0`. When should you increment this value? Anytime a new song is added to an artist. Your `.song_count` method should then return the value of the `@@song_count` variable. Build out the same logic for your `Author` class. 
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-objects-has-many-lab' title='Ruby Objects Has Many Lab'>Ruby Objects Has Many Lab</a> on Learn.co and start learning to code for free.</p>
