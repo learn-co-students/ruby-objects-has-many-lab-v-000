@@ -12,8 +12,8 @@ class Artist # rspec --fail-fast
   end
 
   def add_song(song)
-    @songs << song
-    song.artist = self 
+    self.songs << song
+    song.artist = self
     @@song_count += 1
   end
 
@@ -24,6 +24,4 @@ class Artist # rspec --fail-fast
   def self.song_count
     @@song_count
   end
-
-
 end

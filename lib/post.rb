@@ -1,21 +1,12 @@
 class Post # rspec --fail-fast
-attr_accessor :author
+attr_accessor :title, :author
 
 
   def initialize(title)
     @title = title
   end
 
-  def title
-    @title
-  end
-
-  def author
-    @author
-  end
-
   def author_name
-    self.author.name if self.author 
+    self.author.name if self.author
   end
-
 end

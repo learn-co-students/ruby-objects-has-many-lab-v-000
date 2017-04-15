@@ -1,19 +1,12 @@
-class Song # rspec --fail-fast
+class Song 
 
-attr_accessor :artist
+attr_accessor :name, :artist
 
   def initialize(name)
     @name = name
   end
 
-  def name
-    @name
-  end
-
   def artist_name
-    self.artist ? self.artist.name : nil 
+    self.artist ? self.artist.name : nil
   end
-
-
-
 end
