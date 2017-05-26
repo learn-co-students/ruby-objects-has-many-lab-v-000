@@ -12,6 +12,3 @@ class Post
         end
     end
 end
-
-post = Post.new("title")
-post.author_name
