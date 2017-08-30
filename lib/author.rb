@@ -1,5 +1,7 @@
+require 'pry'
+
 class Author
-  attr_accessor :name
+  attr_accessor :name, :posts
 
   @@post_count = 0
 
@@ -13,18 +15,20 @@ class Author
     end
 
     def add_post(post)
-      @posts<<posts
-      post.author = self unless post.author == self
+      # binding.pry
+      @posts<<post
+      post.author = self
+      @@post_count+=1
+
     end
 
     def add_post_by_title(title)
       post=Post.new(title)
-      @posts<<post
-      post.author = self unless post.author == self
+      add_post(post)
     end
 
     def self.post_count
-      @posts.count
+      @@post_count
     end
 
 end
