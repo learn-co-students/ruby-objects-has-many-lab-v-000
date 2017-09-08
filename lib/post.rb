@@ -14,4 +14,10 @@ attr_reader :title, :name
     self.author.name
     end
   end
+
+  # Other option:
+  #if self.artist
+  #    self.artist.name
+  #  else
+  #    nil
 end
