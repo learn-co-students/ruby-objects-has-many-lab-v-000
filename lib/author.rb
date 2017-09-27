@@ -2,8 +2,8 @@ class Author
   attr_accessor :name, :posts, :post
 
   @@post_count = 0
-  
-  def intialize(name)
+
+  def initialize(name)
     @name = name
     @posts = []
   end
