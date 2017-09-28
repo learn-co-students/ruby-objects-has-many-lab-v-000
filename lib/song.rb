@@ -1,19 +1,18 @@
+require 'pry'
 class Song
-  attr_accessor :name_of_song, :artist
-  @all_songs # can this be #songs like in artist.rb, or should they be different?
+  attr_accessor :name, :artist, :song
 
-  def initialize(name_of_song, artist)
-    @name_of_song = name_of_song
-    @artist = artist
-    @all_songs << self
+
+  def initialize(name)
+    @name = name
   end
 
 
+
   def artist_name
-    if self.artist
-      self.artist.name_of_song
-    else
-      nil
+
+    if self.artist.song
+      self.artist.name #where did I get artist from --instance of artist method -- from a
     end
   end
 
