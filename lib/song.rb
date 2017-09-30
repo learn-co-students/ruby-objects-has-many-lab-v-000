@@ -1,19 +1,16 @@
-require 'pry'
-class Song
-  attr_accessor :name, :artist, :song
 
+class Song
+  attr_accessor :name, :artist
 
   def initialize(name)
     @name = name
   end
 
-
-
   def artist_name
-
-    if self.artist.song
-      self.artist.name #where did I get artist from --instance of artist method -- from a
+    if self.artist
+      self.artist.name
+    else
+      nil
     end
   end
-
 end
