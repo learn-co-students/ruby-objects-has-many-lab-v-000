@@ -7,11 +7,7 @@ class Post
     end
 
     def author_name
-      if self.author == nil
-        self.author
-      else
-      self.author.name  #there is a problem here, need to return nil if no
-      end
+      self.author&.name  #use safe navigation operator "&" to return nil if class author doesn't exist
     end
 
 end

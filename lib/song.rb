@@ -8,11 +8,7 @@ class Song
   end
 
   def artist_name
-    if self.artist == nil
-      self.artist
-    else
-    self.artist.name  #there is a problem here, need to return nil if no
-    end
+    self.artist&.name #use safe navigation operator "&" to return nil if class artist doesn't exist
   end
 
 
