@@ -1,4 +1,3 @@
-require 'pry'
 class Song
   attr_accessor :name, :artist
 
@@ -11,7 +10,3 @@ class Song
   end
 
 end
-
-
-freebird = Song.new("Free Bird")
-freebird.artist_name
