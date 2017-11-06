@@ -1,5 +1,3 @@
-require 'pry'
-
 class Artist
     
     @@song_count = 0
