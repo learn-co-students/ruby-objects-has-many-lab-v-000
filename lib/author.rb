@@ -1,33 +1,38 @@
-class Artist
+class Author
     
-        attr_accessor :name, :song
+        attr_accessor :name, :post, :title
     
         def initialize(name)
-            @name = name
+            @name = name     
+        end
     
-            @song = []
+        def posts(post)
+            @posts << post
+    
+            self.name.post
     
         end
     
-        def add_song(song)
-            @song << song
+        def add_post(post)
+            @posts << post
     
-            self.song.Artist
-    
+            self.name.post
         end
     
-        def add_song_by_name(name)
-            @song
-            self.name.song.Artist
+        def add_post_by_title(title)
+            title = self.new
+
+            self.post.name.title
+
+            # DO I NEED TO INSTANTIATE TITLE HERE?
+
         end
-    
-        def song_count
-            @@song.count = song.artist.count
-            unless song.artist == nil
-    
-            @@song.count
+        
+        def self.post_count
+            # @@post_count
             
-            end
+            # self.post.count
+            # WAIT TO GET SONG'S METHOD CORRECT
         end
     
     end

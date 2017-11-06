@@ -1,6 +1,6 @@
-class Artist
+class Song
 
-    attr_accessor :name, :song
+    attr_accessor :name, :artist
 
     def initialize(name)
         @name = name
@@ -26,7 +26,7 @@ class Artist
         unless song.artist == nil
 
         @@song.count
-        
+
         end
     end
 

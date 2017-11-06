@@ -1,34 +1,28 @@
-class Artist
+class Post
     
-        attr_accessor :name, :song
+    attr_accessor :name, :title
     
-        def initialize(name)
-            @name = name
-    
-            @song = []
-    
-        end
-    
-        def add_song(song)
-            @song << song
-    
-            self.song.Artist
-    
-        end
-    
-        def add_song_by_name(name)
-            @song
-            self.name.song.Artist
-        end
-    
-        def song_count
-            @@song.count = song.artist.count
-            unless song.artist == nil
-    
-            @@song.count
-            
-            end
-        end
+    def initialize(title)
+        @name = name
+   
+        @song = []
     
     end
+    
+    # def title(
+        # #  don't need this because attraccessor
+        # end
+    
+    def author
+        self.post.name
+       # SHOULD THIS involve a CLASS VARIABLE? SHOULD IT TAKE AN ARGUMENT?
+    end
+    
+    def author_name             
+        if self.name.post == nil
+           nil   
+        end
+    end
+    
+end
     
