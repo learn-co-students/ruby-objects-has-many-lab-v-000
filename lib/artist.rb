@@ -24,4 +24,9 @@ class Artist
             @@song_count
         end
     
+<<<<<<< HEAD
     end
+=======
+    end
+      
+>>>>>>> 7d7e7eb54ce3bfacb76429f0f18b2da2be3bb65d
