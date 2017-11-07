@@ -8,26 +8,11 @@ class Song
         @song = []
 
     end
-
-    def add_song(song)
-        @song << song
-
-        self.song.Artist
-
-    end
-
-    def add_song_by_name(name)
-        @song
-        self.name.song.Artist
-    end
-
-    def song_count
-        @@song.count = song.artist.count
-        unless song.artist == nil
-
-        @@song.count
-
-        end
+   
+    def artist_name       
+        if self.artist
+          self.artist.name
+        end   
     end
 
 end
