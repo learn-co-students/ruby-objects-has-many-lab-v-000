@@ -16,22 +16,16 @@ class Author
         def add_post(post)
             @posts << post
             post.author = self    
+            @@song_count +=1 
         end
         # binding.pry
         def add_post_by_title(title)
-            title = self.new
-
-            self.post.name.title
-
-            # DO I NEED TO INSTANTIATE TITLE HERE?
-
+            post = Post.new(title)
+            add_post(post)
         end
         
         def self.post_count
-            # @@post_count
-            
-            # self.post.count
-            # WAIT TO GET SONG'S METHOD CORRECT
+            @@post_count
         end
     
     end
