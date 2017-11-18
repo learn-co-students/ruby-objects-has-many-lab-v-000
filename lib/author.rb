@@ -2,7 +2,8 @@ require 'pry'
 require 'post.rb'
 class Author
 
-  attr_accessor :name, :posts
+  attr_accessor :name
+  attr_reader :posts
   @@post_count = 0
 
   def initialize(name)
@@ -16,10 +17,9 @@ class Author
     post.author = self
   end
 
-  def add_post_by_title(post_title)
-    post = Post.new(post_title)
+  def add_post_by_title(title)
+    post = Post.new(title)
     self.add_post(post)
-    post.title
   end
 
   def self.post_count
