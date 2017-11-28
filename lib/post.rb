@@ -5,11 +5,11 @@ class Post
   def initialize(title)
    @title = title  
   end
-# create title method 
-  #def title 
-    
-  #end
+# create title method - used in attr_accessor  
 # create author method 
+  def author 
+  
+  end
 
 # create author_name method 
 
