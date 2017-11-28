@@ -2,13 +2,13 @@ require 'pry'
 
 #create Artist class 
 # create Song class 
-class Song 
-    attr_accessor :artist
-    def initialize(name)
-    end 
-    
-    
-end 
+#class Song 
+#    attr_accessor :artist
+#    def initialize(name)
+#    end 
+#    
+#    
+#end 
 
 class Artist 
     attr_accessor :name, :songs # create attr_accessor for name, songs
@@ -16,6 +16,10 @@ class Artist
         @name = name 
         @songs = [] # create songs instance variable
         # set to empty array
+    end 
+    
+    def self.song_count
+        self.songs.count
     end 
     
     # create add_song instance method 
@@ -28,9 +32,9 @@ class Artist
     
     def add_song_by_name(song_name) # takes argument of song name
         # creates a new song
-        song_name = self.new
+        song = Song.new(song_name)
         # shows the relationship between song and artist
-        
+        add_song(song)    
     end 
     
 end 
