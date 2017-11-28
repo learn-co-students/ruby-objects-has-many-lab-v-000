@@ -26,8 +26,9 @@ class Artist
         song.artist = self 
     end
     
-    def add_song_by_name # takes argument of song name
-        # creates a neew song 
+    def add_song_by_name(song_name) # takes argument of song name
+        # creates a new song
+        song_name = self.new
         # shows the relationship between song and artist
         
     end 
