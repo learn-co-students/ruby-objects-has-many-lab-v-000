@@ -6,7 +6,7 @@ class Author
   @@post_count = 0 
 # create initialize method with argument (name)
   def initialize(name)
-    
+    @posts = []
   end
 # add collection of posts equal to an empty array
 
