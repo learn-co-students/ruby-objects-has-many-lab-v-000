@@ -1,5 +1,5 @@
 # create class Author 
-
+class Author
 # create attr_accessor for name, posts
 
 # create class variable @@post_count
@@ -24,3 +24,4 @@
 
 # method should return total #/posts
 
+end 
