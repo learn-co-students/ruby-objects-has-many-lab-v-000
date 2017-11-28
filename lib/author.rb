@@ -1,3 +1,5 @@
+require 'pry'
+
 # create class Author 
 class Author
 # create attr_accessor for name, posts
@@ -16,10 +18,11 @@ class Author
     @name
   end
 # create add_post method with argument (post)
-  def add_post(post)
+  def add_post(post) 
+    binding.pry
     @posts << post # add_post method should add the post to the author's collection (@posts array)
     # add_post method should show relationship between post and author 
-    binding.pry
+    
     new_post = post.name
   end
 
