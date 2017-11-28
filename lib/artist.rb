@@ -12,6 +12,8 @@ require 'pry'
 
 class Artist 
     attr_accessor :name, :songs # create attr_accessor for name, songs
+    # create class variable @@song_count 
+    
     def initialize(name) # initialized instance with name 
         @name = name 
         @songs = [] # create songs instance variable
@@ -19,7 +21,7 @@ class Artist
     end 
     
     def self.song_count
-        self.songs.count
+       binding.pry
     end 
     
     # create add_song instance method 
