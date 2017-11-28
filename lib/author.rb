@@ -7,10 +7,14 @@ class Author
 # create initialize method with argument (name)
   def initialize(name)
     @posts = []
+    @name = name
   end
 # add collection of posts equal to an empty array
 
 # create name method 
+  def name 
+    @name
+  end
 
 # create add_post method with argument (post)
 # add_post method should add the post to the author's collection (@posts array)
