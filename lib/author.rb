@@ -17,9 +17,11 @@ class Author
   def name 
     @name
   end
+  
 # create add_post method with argument (post)
-  def add_post(post) 
-    binding.pry
+  def add_post(post)
+    
+  binding.pry
     @posts << post # add_post method should add the post to the author's collection (@posts array)
     # add_post method should show relationship between post and author 
     
