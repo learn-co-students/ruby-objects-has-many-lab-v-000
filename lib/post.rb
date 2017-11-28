@@ -3,7 +3,7 @@ class Post
   attr_accessor :title
 # create initialize method with argument (title) 
   def initialize(title)
-    
+   @title = title  
   end
 # create title method 
   #def title 
