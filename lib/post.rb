@@ -8,12 +8,11 @@ class Post
    @title = title  
   end
 # create title method - used in attr_accessor  
-# create author method 
-#  def author 
-#    
-#  end
-
+# create author method - used in attr_accessor 
 # create author_name method 
+  def author_name 
+    
+  end 
 
   
 end 
