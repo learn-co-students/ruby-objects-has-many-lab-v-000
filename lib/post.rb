@@ -11,6 +11,7 @@ class Post
 # create author method - used in attr_accessor 
 # create author_name method 
   def author_name 
+    self.author.name
     
   end 
 
