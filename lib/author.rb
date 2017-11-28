@@ -3,9 +3,11 @@ class Author
 # create attr_accessor for name, posts
   attr_accessor :name, :posts
 # create class variable @@post_count
-
+  @@post_count = 0 
 # create initialize method with argument (name)
-
+  def initialize(name)
+    
+  end
 # add collection of posts equal to an empty array
 
 # create name method 
