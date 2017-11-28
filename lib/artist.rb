@@ -19,19 +19,13 @@ class Artist
         @songs = [] # create songs instance variable
         # set to empty array
     end 
-    
-    def self.song_count
-          binding.pry
-        @@song_count += @songs.length
-       binding.pry
-    end 
-    
-    # create add_song instance method 
+   # create add_song instance method 
     # has one argument (song) 
     
     def add_song(song)
         @songs << song
         song.artist = self 
+        @@song_count += 1
     end
     
     def add_song_by_name(song_name) # takes argument of song name
@@ -40,5 +34,7 @@ class Artist
         # shows the relationship between song and artist
         add_song(song)    
     end 
-    
+      def self.song_count
+         @@song_count
+    end 
 end 
