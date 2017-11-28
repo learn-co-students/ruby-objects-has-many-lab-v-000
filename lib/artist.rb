@@ -3,7 +3,8 @@ require 'pry'
 #create Artist class 
 # create Song class 
 class Song 
-    
+    def initialize(name)
+    end 
     
     
 end 
