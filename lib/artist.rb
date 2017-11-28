@@ -3,6 +3,7 @@ require 'pry'
 #create Artist class 
 # create Song class 
 class Song 
+    attr_accessor :artist
     def initialize(name)
     end 
     
