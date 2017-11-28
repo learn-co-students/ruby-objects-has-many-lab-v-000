@@ -7,13 +7,12 @@ class Song
     def initialize(name)
         @name = name
     end 
-    
-    def name
-        @name
-    end 
         
     def artist_name 
-        
+      song_artist = self.artist.name
+#      if @name == name
+#        return @songs
+#      end
     end 
     
 end 

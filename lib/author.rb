@@ -20,12 +20,9 @@ class Author
   
 # create add_post method with argument (post)
   def add_post(post)
-    
-  
     @posts << post # add_post method should add the post to the author's collection (@posts array)
     # add_post method should show relationship between post and author 
-    
-    new_post = post.name
+    new_post = self.author.name
   end
 
 # add_post method should show relationship between post and author 
