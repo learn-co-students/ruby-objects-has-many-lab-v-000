@@ -13,7 +13,7 @@ class Artist
     # has one argument (song) 
     
     def add_song(song)
-    
+        @songs << song
     end
     
 end 
