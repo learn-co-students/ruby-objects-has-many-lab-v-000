@@ -26,7 +26,9 @@ class Artist
         song.artist = self 
     end
     
-    def add_song_by_name
+    def add_song_by_name # takes argument of song name
+        # creates a neew song 
+        # shows the relationship between song and artist
         
     end 
     
