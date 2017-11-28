@@ -1,6 +1,13 @@
 require 'pry'
 
 #create Artist class 
+# create Song class 
+class Song 
+    
+    
+    
+end 
+
 class Artist 
     attr_accessor :name, :songs # create attr_accessor for name, songs
     def initialize(name) # initialized instance with name 
