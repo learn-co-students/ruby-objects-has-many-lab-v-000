@@ -32,16 +32,14 @@ class Author
 
 # create add_post_by_title method w/argument (post_title)
   def add_post_by_title(post_title)
-    
-    new_post = Author.new(post_title)
-    add_post(post)
+    post = Post.new(post_title)
+    add_post(post) 
   end 
 # method above should create a new post
-
 # show relationship between post and author 
 
 # create class method (self.post_count)
-
+  def self.post_count
 # method should return total #/posts
-
+    @@post_count
 end 
