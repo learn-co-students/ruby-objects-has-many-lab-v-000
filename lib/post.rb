@@ -11,11 +11,9 @@ class Post
 # create author method - used in attr_accessor 
 # create author_name method 
   def author_name
-    
-    name = author.name 
-    if !name
-      return author
-    end 
-  end 
+    author ? author.name : nil
+   # if post has an author return name of author
+  # if post does not have an author return nil 
+ end 
   
 end 
