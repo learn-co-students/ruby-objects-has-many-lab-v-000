@@ -9,10 +9,9 @@ class Song
     end 
         
     def artist_name 
-      binding.pry
-      song_artist = self.artist.name
-      if name 
-         name.artist
+      #song_artist = self.artist.name
+      if artist 
+         artist.name
       else 
         nil
       end
