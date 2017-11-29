@@ -30,7 +30,9 @@ class Author
 # add_post method should show relationship between post and author 
 
 # create add_post_by_title method w/argument (post_title)
-
+  def add_post_by_title
+    
+  end 
 # method above should create a new post
 
 # show relationship between post and author 
