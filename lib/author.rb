@@ -31,7 +31,7 @@ class Author
 
 # create add_post_by_title method w/argument (post_title)
   def add_post_by_title(post_title)
-    
+    title = Author.new(post_title)
   end 
 # method above should create a new post
 
