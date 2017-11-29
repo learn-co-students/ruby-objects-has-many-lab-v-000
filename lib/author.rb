@@ -42,4 +42,5 @@ class Author
   def self.post_count
 # method should return total #/posts
     @@post_count
+  end
 end 
