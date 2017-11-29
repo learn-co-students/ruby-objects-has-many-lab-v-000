@@ -25,13 +25,16 @@ class Author
     # add_post method should show relationship between post and author 
     # should have the equivalent of title.author
     post.author = self
+    @@post_count += 1
   end
 
 # add_post method should show relationship between post and author 
 
 # create add_post_by_title method w/argument (post_title)
   def add_post_by_title(post_title)
-    title = Author.new(post_title)
+    
+    new_post = Author.new(post_title)
+    add_post(post)
   end 
 # method above should create a new post
 
