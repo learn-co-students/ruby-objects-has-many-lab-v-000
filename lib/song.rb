@@ -1,3 +1,5 @@
+# require 'pry'
+
 class Song
 
   attr_accessor :name, :artist
@@ -10,5 +12,5 @@ class Song
    self.artist ? self.artist.name : nil
   end
 
-
+# binding.pry
 end
