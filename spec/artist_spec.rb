@@ -2,54 +2,40 @@ require "spec_helper"
 
 describe "Artist" do
 
-  let!(:adele) { Artist.new("Adele") } 
+  let!(:adele) { Artist.new("Adele") }
+  let!(:hello) { Song.new("Hello", adele)}
 
-    describe "#new" do 
-      it "is initialized with a name" do 
-        expect{Artist.new("Beyonce")}.to_not raise_error
-      end
+  describe "#new" do
+    it "is initialized with a name" do
+      expect{Artist.new("Beyonce")}.to_not raise_error
+    end
+  end
 
-      it "is initialized with an empty collection of songs" do 
-        expect(adele.instance_variable_get(:@songs)).to match([])
-      end
+  describe "#name" do
+    it "has an attr_accessor for name" do
+      expect(adele.name).to eq("Adele")
+    end
+  end
+
+  describe "#songs" do
+    it "selects the songs from the Song class which have `self` as the artist" do
+      expect(adele.songs).to be_a(Array)
+      expect(adele.songs).to include(hello)
     end
 
-    describe "#name" do
-      it "has an attr_accessor for name" do 
-        expect(adele.name).to eq("Adele")
+    it "does not select the songs which don't 'belong' to itself" do
+      nintynine_problems = Song.new("Ninty Nine Problems")
+      expect(adele.songs).to be_a(Array)
+      expect(adele.songs).to include(hello)
+      expect(adele.songs).to_not include(nintynine_problems)
     end
+  end
 
-    describe "#songs" do 
-      it "has many songs" do
-        expect(adele.songs).to be_a(Array)
-      end
-    end
-
-    describe "#add_song" do 
-      it "takes in an argument of a song and adds that song to the artist's collection and tells the song that it belongs to that artist" do 
-        hello = Song.new("Hello")
-        adele.add_song(hello)
-        expect(adele.songs).to include(hello)
-        expect(hello.artist).to eq(adele)
-      end
-    end
-
-    describe "#add_song_by_name" do 
-      it "takes in an argument of a song name, creates a new song with it and associates the song and artist" do 
-        adele.add_song_by_name("Rolling in the Deep")
-        expect(adele.songs.last.name).to eq("Rolling in the Deep")
-        expect(adele.songs.last.artist).to eq(adele)
-      end
-    end
-
-    describe ".song_count" do 
-      it "is a class method that returns the total number of songs associated to all existing artists" do 
-        expect(Artist.song_count).to eq(2)
-      end
-
-      it "uses the class variable, @@song_count" do 
-        expect(Artist.class_variable_get(:@@song_count)).to be_a(Integer)
-      end
+  describe "#add_song_by_name" do
+    it "takes in an argument of a song name, creates a new song with it and associates the song and artist" do
+      adele.add_song_by_name("Rolling in the Deep")
+      expect(adele.songs.last.name).to eq("Rolling in the Deep")
+      expect(adele.songs.last.artist).to eq(adele)
     end
   end
 end

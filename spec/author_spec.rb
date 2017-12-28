@@ -1,58 +1,42 @@
 require "spec_helper"
-require 'pry'
 
 describe "Author" do
 
-  let!(:betty) { Author.new("Betty") } 
+  let!(:betty) { Author.new("Betty") }
+  let!(:post) { Post.new("I love to program while drinking chamomile tea!", betty) }
 
-    describe "#new" do 
-      it "is initialized with a name" do 
-        expect{Author.new("Betty")}.to_not raise_error
-      end
+  describe "#new" do
+    it "is initialized with a name" do
+      expect{Author.new("Betty")}.to_not raise_error
+    end
+  end
 
-      it "is initialized with an empty collection of posts" do 
-        expect(betty.instance_variable_get(:@posts)).to match([])
-      end
+  describe "#name" do
+    it "has an attr_accessor for name" do
+      expect(betty.name).to eq("Betty")
+    end
+  end
+
+  describe "#posts" do
+    it "selects the posts from the Post class which have `self` as the author" do
+      expect(betty.posts).to be_a(Array)
+      expect(betty.posts).to include(post)
     end
 
-    describe "#name" do
-      it "has an attr_accessor for name" do 
-        expect(betty.name).to eq("Betty")
+    it "does not select the posts which don't 'belong' to itself" do
+      no_author = Post.new("I feel like I made myself!")
+      betty_posts = betty.posts
+      expect(betty_posts).to be_a(Array)
+      expect(betty_posts).to include(post)
+      expect(betty_posts).to_not include(no_author)
     end
+  end
 
-    describe "#posts" do 
-      it "has many posts" do
-        expect(betty.posts).to be_a(Array)
-      end
-    end
-
-    describe "#add_post" do 
-      it "takes in an argument of a post and adds that post to the author's collection and tells the post that it belongs to that author" do 
-        hello_world = Post.new("Hello World")
-        betty.add_post(hello_world)
-        expect(betty.posts).to include(hello_world)
-        expect(hello_world.author).to eq(betty)
-      end
-    end
-
-    describe "#add_post_by_title" do 
-      it "takes in an argument of a post title, creates a new post with it and associates the post and author" do 
-        betty.add_post_by_title("My Great Blog Post")
-        # binding.pry
-        expect(betty.posts.last.title).to eq("My Great Blog Post")
-        expect(betty.posts.last.author).to eq(betty)
-      end
-    end
-
-    describe ".post_count" do 
-      it "is a class method that returns the total number of posts associated to all existing authors" do 
-        # binding.pry
-        expect(Author.post_count).to eq(2)
-      end
-
-      it "uses the class variable, @@post_count" do 
-        expect(Author.class_variable_get(:@@post_count)).to be_a(Integer)
-      end
+  describe "#add_post_by_title" do
+    it "takes in an argument of a post title, creates a new post with it and associates the post and author" do
+      betty.add_post_by_title("My Great Blog Post")
+      expect(betty.posts.last.title).to eq("My Great Blog Post")
+      expect(betty.posts.last.author).to eq(betty)
     end
   end
 end
