@@ -19,7 +19,9 @@ class Artist
     #creates a new song with it and associates the 
     #song and artist
     name = Song.new(name)
-    
+    artist = self.new(name)
+    song.artist = self
+    song
     
   end
 
