@@ -1,3 +1,4 @@
+
 class Artist
   attr_accessor :name, :song
   @@song_count = 0
@@ -26,9 +27,7 @@ class Artist
     @@song_count += 1
   end
 
-  #final_product = @adele.add_song_by_name("Rolling In The Deep")
-
   def self.song_count
-    @@song_count
+  @@song_count
   end
 end
