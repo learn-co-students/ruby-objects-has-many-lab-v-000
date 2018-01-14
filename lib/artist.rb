@@ -8,9 +8,9 @@ class Artist
   end
 
   def add_song(song)
-    @songs << song
+    @songs << song #has many relationship
     @@song_count += 1
-    song.artist = self
+    song.artist = self #belongs to
   end
 
   def add_song_by_name(name)
