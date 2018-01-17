@@ -16,6 +16,7 @@ attr_accessor :name
   def add_song(song)
     @songs << song
     song.artist = self
+    #here we tell the collectible item (a song) who it belongs to.
     @@song_count += 1
   end
 
@@ -23,6 +24,7 @@ attr_accessor :name
     song = Song.new(name)
     @songs << song
     song.artist = self
+    #here we tell the collectible item (a post) who it belongs to.
     @@song_count += 1
   end
 
