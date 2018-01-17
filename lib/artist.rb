@@ -3,10 +3,14 @@ class Artist
 attr_accessor :name
 @@song_count = 0
 
+
   def initialize(name)
     @name = name
     @songs = []
-    @@song_count += 1
+    #here we are initializing a new instance of the Artist class.
+    #like creating artist Beyonce or Adele. This there for isn't an approp.
+    #place to increment the song counter because the song isn't being created here
+    #just the artist!!
   end
 
   def add_song(song)
@@ -20,7 +24,6 @@ attr_accessor :name
     @songs << song
     song.artist = self
     @@song_count += 1
-    binding.pry
   end
 
   def songs
@@ -28,7 +31,7 @@ attr_accessor :name
   end
 
   def self.song_count
-    @songs.length
+    @@song_count
   end
 
 

@@ -1,10 +1,12 @@
 class Author
   attr_accessor :name
+  @@post_count = 0
 
   def initialize(name)
     @name = name
     @posts = []
-    @@post_count = 0
+    #here we are initialize an instance of the Author class. like author
+    #Blume or Picoult. Again, not an approp place to increment post count.
   end
 
   def add_post(post)
