@@ -27,18 +27,3 @@ class Artist
     @@song_count
   end
 end
-
-
-
-
-def Song
-  attr_accessor :artist, :name
-
-  def initialize(name)
-    @name = name
-  end
-
-  def artist_name
-    self.artist.name
-  end
-end
