@@ -25,5 +25,4 @@ class Artist
    self.add_song(song)
  end
 
-
 end
