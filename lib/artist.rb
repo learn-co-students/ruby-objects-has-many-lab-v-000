@@ -2,7 +2,9 @@ require "pry"
 
 class Artist
   @@song_count = 0
-  attr_accessor :name, :songs
+  attr_accessor :name
+  attr_reader :songs
+
  def initialize(name)
    @name = name
    @songs = []
@@ -12,12 +14,10 @@ class Artist
    @@song_count
  end
 
-
-
  def add_song(song)
    self.songs << song
-   @@song_count += 1
    song.artist = self
+   @@song_count += 1
  end
 
  def add_song_by_name(song_name)
@@ -25,12 +25,5 @@ class Artist
    self.add_song(song)
  end
 
-
-
-
-  # use an instance variable @songs to build the "has many relationship"
-  # add each song by name
-    #create then push
-  #
 
 end
