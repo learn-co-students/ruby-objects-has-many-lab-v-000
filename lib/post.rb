@@ -1,5 +1,11 @@
 class Post
-  attr_accessor :title
-  def initialize
+  attr_accessor :post
+  def initialize(post)
+    @post = post
   end
+
+  def self.post
+    @post
+  end
+
 end
