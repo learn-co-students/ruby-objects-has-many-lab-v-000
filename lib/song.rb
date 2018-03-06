@@ -1,15 +1,15 @@
 class Song 
-  attr_accessor :name, :artist
+  attr_accessor :artist, :name
   
   def initialize(name)
-    self.name = name
+    @name = name
   end
   
   def artist_name
-    if artist != nil
-       self.artist.name
-    else  
+    if artist.nil?
       nil
-    end  
+    else
+      self.artist.name
+    end
   end  
-end 
+end  
