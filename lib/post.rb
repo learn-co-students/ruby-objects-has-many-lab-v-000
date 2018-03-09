@@ -1,11 +1,11 @@
-class Pong
-  attr_accessor :name, :author
-  def initialize(post)
-    @name = post
+class Post
+  attr_accessor :name, :author, :title
+  def initialize(title)
+    @title = title
   end
 
-  def new_post
-    if @post then self.post.name else nil
+  def author_name
+    if @author then self.author.name else nil
   end
 end
 end
