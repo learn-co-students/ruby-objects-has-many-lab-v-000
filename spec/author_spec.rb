@@ -19,6 +19,7 @@ describe "Author" do
       it "has an attr_accessor for name" do 
         expect(betty.name).to eq("Betty")
     end
+  end
 
     describe "#posts" do 
       it "has many posts" do
@@ -55,4 +56,3 @@ describe "Author" do
       end
     end
   end
-end

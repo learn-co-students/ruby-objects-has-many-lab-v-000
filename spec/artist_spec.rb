@@ -4,8 +4,8 @@ describe "Artist" do
 
   let!(:adele) { Artist.new("Adele") } 
 
-    describe "#new" do 
-      it "is initialized with a name" do 
+  describe "#new" do 
+    it "is initialized with a name" do 
         expect{Artist.new("Beyonce")}.to_not raise_error
       end
 
@@ -18,6 +18,7 @@ describe "Artist" do
       it "has an attr_accessor for name" do 
         expect(adele.name).to eq("Adele")
     end
+  end
 
     describe "#songs" do 
       it "has many songs" do
@@ -52,4 +53,4 @@ describe "Artist" do
       end
     end
   end
-end
+
