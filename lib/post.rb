@@ -1,6 +1,6 @@
 require 'pry'
 class Post
-  attr_accessor :title, :post, :author
+  attr_accessor :title, :author
 
     def initialize(title)
       @title = title
@@ -8,7 +8,13 @@ class Post
 
 
     def new_post
-      self.post.name
+      self.post.title
+    end
+
+    def author_name
+      if self.author
+        author.name
+      end
     end
 
 

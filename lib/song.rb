@@ -10,6 +10,12 @@ attr_accessor :song, :name, :artist
     self.song.name
   end
 
+  def artist_name
+    if self.artist
+      artist.name
+    end
+  end
+
 
 
 end
