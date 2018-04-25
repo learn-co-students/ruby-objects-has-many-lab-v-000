@@ -3,11 +3,10 @@ class Post
 
   def initialize(title)
     @title = title
-    @author = nil
   end
 
   def author_name
-    self.author == nil ? nil : self.author.name
+    self.author ? self.author.name : nil
   end
 
 end
