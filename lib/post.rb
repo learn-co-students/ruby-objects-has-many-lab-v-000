@@ -3,10 +3,10 @@ class Post
 
   @@all = []
 
-  def initialize(name, author=nil)
+  def initialize(title, author=nil)
     @name = name
     @author = author
-    @@all << self
+    @@post.count << self
   end
 
   def author_name
