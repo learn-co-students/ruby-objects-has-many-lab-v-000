@@ -16,6 +16,17 @@ class Author
       nil
     end
   end
+  
+   def add_post_by_name(name)
+    post = Post.new(name)
+    self.post << post
+    post.artist = self
+    @@post_count +=1
+  end
+  
+  def posts 
+    @posts
+  end
 
   def self.all
     @@all
