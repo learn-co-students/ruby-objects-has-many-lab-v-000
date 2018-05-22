@@ -1,34 +1,25 @@
- class Author
-  
-  attr_accessor :posts, :name
+class Author
+  @@post_count = 0 
 
-  @@post_count=0
+  attr_accessor :posts, :name 
 
   def initialize(name=nil)
     @posts = []
-    @name = name
-  end
-
-  def author_name
-    @name
+    self.name = name
   end
 
   def add_post(post)
-    @posts << post
+    self.posts << post
     post.author = self
-    @@post_count+=1
+    @@post_count +=1
   end
 
   def add_post_by_title(title)
-    post = Post.new(title)
-    @posts << post
-    post.author = self
-    @@post_count+=1
+    x = Post.new(title)
+    add_post(x)
   end
 
   def self.post_count
     @@post_count
   end
-
- end
-
+end
