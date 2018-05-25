@@ -15,6 +15,13 @@ class Song
   end
 
   def artist_name
+    # this is theirs, and more elegant:
+    # if self.author
+    #   self.author.name
+    # else
+    #   nil
+    # end
+
     if self.artist == nil
       nil
     else

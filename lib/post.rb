@@ -16,6 +16,13 @@ class Post
   end
 
   def author_name
+    # this is theirs, and more elegant:
+    # if self.author
+    #   self.author.name
+    # else
+    #   nil
+    # end
+    
     if self.author == nil
       nil
     else
