@@ -9,7 +9,6 @@
     @@all << self
   end
 
-  
   def add_song(song)
     song.artist = self
   end
@@ -26,7 +25,7 @@
   end 
   
   def self.song_count 
-   self <<  Song.all.count 
+     Song.all.count
   end 
   
 
