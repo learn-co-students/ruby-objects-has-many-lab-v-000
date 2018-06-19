@@ -1,4 +1,6 @@
 # Spent too much time on this one.... I'll come back to this another time.
+# Learn IDE crashed and lost all my initial code.
+# Putting this code as a placeholder until I come back to this...
 
 require_relative 'song'
 
