@@ -1,8 +1,9 @@
 class Post
   
   attr_accessor :title, :author
-  
+
   @@all = []
+  @@post_count = []
   
   def initialize(title, artist = nil)
     @title = title
