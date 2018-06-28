@@ -6,13 +6,13 @@ class Artist
 
     @@all_songs = []
 
+  def self.song_database
+    @@all_songs
+  end
+
   def initialize(name)
     @name = name
     @songs = []
-  end
-
-  def self.song_database
-    @@all_songs
   end
 
   # ADD SONGS SECTION
@@ -20,7 +20,6 @@ class Artist
   def add_song(song)
     song.artist = self
     self.songs << song
-    binding.pry
     self.class.add_song_to_database(song)
   end
 
@@ -31,14 +30,14 @@ class Artist
     self.class.add_song_to_database(song)
   end
 
-  def self.add_song_to_database(song)
-    self.class.song_database << song
-  end
-
   # CLASS METHODS SECTION
 
+  def self.add_song_to_database(song)
+    song_database << song
+  end
+
   def self.song_count
-    self.class.song_database.length
+    song_database.length
   end
 
 
