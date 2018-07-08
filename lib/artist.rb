@@ -5,26 +5,27 @@ class Artist
 
     def initialize(name)
       @name = name
-      @songs = []
+
     end
 
     def add_song(song)
+      $songs << song unless $songs.include? song
       song.artist = self
-      @songs << song
     end
 
     def songs
-      @songs
+      $songs
     end
 
     def add_song_by_name(name)
       song = Song.new(name)
-      @songs << song
+      $songs << song unless $songs.include? song
       song.artist = self
     end
 
     def self.song_count
-      @songs.each {|s| s.count}
+      $songs.count
+    #  binding.pry
     end
 
 
