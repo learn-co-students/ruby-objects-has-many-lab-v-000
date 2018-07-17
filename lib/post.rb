@@ -4,18 +4,18 @@ class Post
 
   @@all = [] #set empty array to catch the instances (class var)
 
-  def initialize(title)
+  def initialize(title) #author defaults to nil
     @title = title
     @author = author
     @@all << self
   end
 
   def author_name
-      if self.author # if the local var author matches the self (stored author for instance)
-        self.author.name
-      else
+    if self.author # if the local var author matches the self (stored author for instance)
+       self.author.name #then return the name of the authors self that is store (author's name if given)
+    else
         nil
-      end
+     end
   end
 
     def self.all
