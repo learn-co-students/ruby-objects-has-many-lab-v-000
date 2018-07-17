@@ -1,13 +1,12 @@
 class Post
-  attr_accessor :name, :author
-  attr_reader :title
+  attr_accessor :author #posts belong to the author
+  attr_reader :title #just need to read the title (get it) don't need to set it from here.
 
-  @@all = []
+  @@all = [] #set empty array to catch the instances (class var)
 
   def initialize(title)
     @title = title
     @author = author
-    #@title = title #?
     @@all << self
   end
 
