@@ -1,5 +1,5 @@
 class Author
-  attr_reader :name, :posts
+  attr_reader :name, :posts, :title
 
   @@all = []
 
@@ -25,6 +25,10 @@ class Author
   def add_post_by_title(title)
     post = Post.new(title)
     add_post(post)
+  end
+
+  def self.post_count
+    Post.all.count
   end
 
 end
