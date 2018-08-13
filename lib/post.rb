@@ -12,10 +12,14 @@ class Post
   end
 
   def author_name
-     self.author.name
+      if self.author
+        self.author.name
+      else
+        nil
+      end
+    end
   end
-end
-
+  #spec
   # describe "#author_name" do
   #   it "knows the name of its author" do
   #     sophie = Author.new("Sophie")
