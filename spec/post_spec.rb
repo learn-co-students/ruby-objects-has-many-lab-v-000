@@ -58,5 +58,4 @@ describe "Post" do
 
 
   end
-# binding.pry
 end
