@@ -1,5 +1,5 @@
 class Author
-  attr_accessor :name
+  attr_accessor :name, :posts
   @@post_count = 0
 
   def initialize(name)
@@ -12,16 +12,16 @@ class Author
   end
 
   def add_post(post)
-    self.posts << post
+    @posts << post
     post.author = self
-    @@post_count += 1
+    @@post_count += 1 #will increase the class variable if a post has an author associated
   end
 
-  def add_post_by_title(post_title)
-    new_post = Post.new(post_title)
-    self.posts << new_post
-    new_post.author = self
-    @@post_count += 1
+  def add_post_by_title(title)
+    post = Post.new(title)
+    post.author = self
+    @posts << post
+    @@post_count += 1 #will increase the class variable if a post has an author associated
   end
 
   def self.post_count
