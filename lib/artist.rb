@@ -1,12 +1,6 @@
-# Spent too much time on this one.... I'll come back to this another time.
-# Learn IDE crashed and lost all my initial code.
-# Putting this code as a placeholder until I come back to this...
-
-require_relative 'song'
-
 class Artist
-  attr_accessor :name, :artist, :songs
 
+attr_accessor :name, :songs, :artist
   @@song_count = 0
 
   def initialize(name)
@@ -24,9 +18,30 @@ class Artist
     @songs << song
     song.artist = self
     @@song_count += 1
+
+    @name = name
+    @songs = []
+  end
+
+  def add_song(song)
+    @@song_count+=1
+    self.songs << song
+    song.artist = self
+  end
+
+  def songs
+    @songs
+  end
+
+  def add_song_by_name(name)
+    song = Song.new(name)
+    self.songs << song
+    song.artist = self
+    @@song_count +=1
   end
 
   def self.song_count
     @@song_count
   end
+
 end
