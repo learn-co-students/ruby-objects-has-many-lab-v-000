@@ -4,6 +4,8 @@ class Song
      @name = name
       @@all = [] 
    end 
+   
+
 
   
   def artist_name
@@ -13,3 +15,4 @@ class Song
    
   
 end 
+
