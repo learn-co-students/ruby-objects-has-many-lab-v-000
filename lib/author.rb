@@ -34,5 +34,4 @@ class Author
     end 
     count
   end
-  
 end
