@@ -1,13 +1,12 @@
-require 'pry'
-
 class Author
   attr_accessor :name, :posts, :author, :title
  
   @@all = []
- 
+     
   def initialize(name)
     @name = name
     @posts = []
+    @@all << self
   end
  
   def add_post(post)
@@ -27,11 +26,13 @@ class Author
   end
   
   def self.post_count
-    @posts.each do |x|
-      if x == title 
-        x.count 
+    count = 0 
+    @@all.each do |author|
+      author.posts.each do |post|
+        count += 1
       end 
     end 
+    count
   end
   
 end
