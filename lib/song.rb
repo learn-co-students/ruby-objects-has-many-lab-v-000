@@ -3,15 +3,13 @@ class Song
   attr_accessor :name, :artist
   @@all=[]
   
-  def initialize(song)
-  binding.pry
-  @song = song
+  def initialize(name)
+  @name = name
   @@all << self
-  
-end
+  end
 
   def artist_name
-    self.artist.name
+    artist.name if artist
   end
   
   def self.all
