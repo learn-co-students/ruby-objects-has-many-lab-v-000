@@ -14,7 +14,7 @@ class Artist
   def add_song(song)
     @songs << song
     @@all_songs_ever << song
-    song.artist = self
+    song.artist = self #<---- self refers to the instantiated artist
   end
 
   def add_song_by_name(song_name)
