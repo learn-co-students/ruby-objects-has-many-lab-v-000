@@ -1,6 +1,7 @@
 class Artist
   attr_accessor :name
   @@all_songs_ever = []
+
   def songs
     @songs
   end
