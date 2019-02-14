@@ -14,7 +14,7 @@ class Artist
   def add_song(song)
     @songs << song
     @@all_songs_ever << song
-    song.artist = self #<---- self refers to the instantiated artist
+    song.artist = self #<---- SELF refers to the instantiated artist
   end
 
   def add_song_by_name(song_name)
@@ -24,7 +24,7 @@ class Artist
     song.artist = self
   end
 
-  def self.song_count
+  def self.song_count #<---SELF refers to the CLASS itself
     @@all_songs_ever.count
   end
 

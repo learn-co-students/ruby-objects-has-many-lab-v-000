@@ -12,13 +12,8 @@ class Post
   end
 
   def author_name
-    #self.author.name
-
-    if self.author.name?
-    end
-
+    self.author != nil ? self.author.name : nil
+    # call the NAME attribute on the AUTHOR class's instantiated objected
   end
-
-
 
 end #<----- class end
