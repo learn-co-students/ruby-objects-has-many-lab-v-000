@@ -1,9 +1,9 @@
 require "spec_helper"
 
- puts describe "Post" do
+  describe "Post" do
 
   let!(:post){Post.new("My Blog Post!")}
-   puts describe "#new" do
+ describe "#new" do
     it "is initialized with an argument of a title" do
       expect{Post.new("Hello World")}.to_not raise_error
     end
@@ -15,7 +15,7 @@ require "spec_helper"
     end
   end
 
- puts describe "#author" do
+ describe "#author" do
     it "belongs to an author" do
       sophie = Author.new("Sophie")
       post.author = sophie
@@ -23,14 +23,14 @@ require "spec_helper"
     end
   end
 
-   puts describe "#author_name" do
+    describe "#author_name" do
     it "knows the name of its author" do
       sophie = Author.new("Sophie")
       post.author = sophie
       expect(post.author_name).to eq("Sophie")
     end
 
-    puts it "returns nil if the post does not have an author" do
+ it "returns nil if the post does not have an author" do
       expect(post.author_name).to eq nil
     end
   end

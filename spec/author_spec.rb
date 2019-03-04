@@ -1,7 +1,7 @@
 require "spec_helper"
 require 'pry'
 
-  puts describe "Author" do
+   describe "Author" do
 
   let!(:betty) { Author.new("Betty") }
 
