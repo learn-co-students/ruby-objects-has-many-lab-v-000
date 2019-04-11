@@ -22,8 +22,8 @@ class Artist
     song.artist = self
   end
 
-  def song_count
-    song.self.all
+  def self.song_count
+    self.all
   end
   # expect(Artist.song_count).to eq(2)
 
