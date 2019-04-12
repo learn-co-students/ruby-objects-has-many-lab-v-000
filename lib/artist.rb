@@ -1,7 +1,6 @@
 class Artist
   attr_accessor :name
 
-
   def initialize(name)
     @name = name
     @songs = []
@@ -23,7 +22,7 @@ class Artist
   end
 
   def self.song_count
-    self.all
+    Song.all.count
   end
   # expect(Artist.song_count).to eq(2)
 
