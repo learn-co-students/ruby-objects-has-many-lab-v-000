@@ -27,14 +27,3 @@ class Artist
   # expect(Artist.song_count).to eq(2)
 
 end
-
-
-# def add_song_by_name(name, genre)
-#     song = Song.new(name, genre)
-#     @songs << song
-#     song.artist = self
-#   end
-# def add_song(song)
-#     @songs << song
-#     song.artist = self
-#   end

@@ -12,29 +12,8 @@ class Post
   end
 
   def author_name
-    if self.author.name == " " 
-      false
+    if !self.author
     else self.author.name
     end
   end
-  # if my_string.to_s.empty?
-  #   # It's nil or empty
-  # end
 end
-
-
-
-# class Song
-#   attr_accessor :artist, :name
-#   @@all = []
-#
-#   def initialize(name)
-#     @name = name
-#     @@all << self
-#   end
-#
-#   def self.all
-#     @@all
-#   end
-#
-# end
