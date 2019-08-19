@@ -15,12 +15,12 @@ describe "Artist" do
         expect(adele.name).to eq("Adele")
       end
     end
-
+    
     describe "#songs" do
       it "has many songs" do
         expect(adele.songs).to be_a(Array)
         hello = Song.new("Hello")
-        hello.artist = adele
+        adele.add_song(hello)
         expect(adele.songs).to eq([hello])
       end
     end
