@@ -1,9 +1,10 @@
+require 'pry'
 class Artist
   attr_accessor :name
   @@all = []
 
   def initialize(name)
-  @name = name
+  @name = name #setting the objects name attribute
   @@all << self
   end
 
@@ -12,7 +13,8 @@ class Artist
   end
 
   def songs
-    Song.all.select { |song| song.artist == self }
+    Song.all.select do |song| song.artist == self
+     end
   end
 
   def add_song(song)
